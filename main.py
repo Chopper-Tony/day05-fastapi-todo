@@ -7,8 +7,8 @@ def get_db():
     return mysql.connector.connect(
         host="localhost",
         port=3306,
-        user="root",
-        password="1234",
+        user="tester",
+        password="tester",
         database="llmagent"
     )
 
@@ -93,3 +93,4 @@ def delete_todo(todo_id: int):
         raise HTTPException(status_code=404, detail="Todo not found")
 
     return {"message": "Todo deleted"}
+
